@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: audi-database-config
+data:
+  VECTORDB_HOST: "audi-database"
+  VECTORDB_PORT: ""

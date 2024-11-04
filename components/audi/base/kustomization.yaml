@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: audi
+  janus-idp.io/tekton: audi
+  backstage.io/kubernetes-id: audi
+  backstage.io/kubernetes-namespace: rhdh-app 
+  app.kubernetes.io/part-of: audi
+resources: 
+- initialize-namespace.yaml
+- deployment.yaml
+- route.yaml
+- service.yaml
+- model-config.yaml
